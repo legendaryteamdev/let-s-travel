@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Lets-Travel</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="language">Language</string>
+    <string name="location">Location</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
