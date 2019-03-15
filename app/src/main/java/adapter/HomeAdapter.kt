@@ -1,17 +1,19 @@
 package adapter
 
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.lets_travel.ProvinceDetailActivity
 import com.example.lets_travel.R
 
-class HomeAdapter(private val myDataset: Array<String>) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+const val PROVINCE_NAME = "province_name"
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val textViews = itemView.findViewById<TextView>(R.id.recycler_text)
-    }
+class HomeAdapter(private val myDataset: Array<String>) :
+    RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+
 
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): HomeAdapter.ViewHolder {
@@ -23,8 +25,24 @@ class HomeAdapter(private val myDataset: Array<String>) : RecyclerView.Adapter<H
         return myDataset.size
     }
 
-    override fun onBindViewHolder(p0: HomeAdapter.ViewHolder, p1: Int) {
-            p0?.textViews?.text  = myDataset[p1]
+    override fun onBindViewHolder(holder: HomeAdapter.ViewHolder, position: Int) {
+        holder?.mProvinceName?.text = myDataset[position]
+
+
+    }
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val mProvinceName = itemView.findViewById<TextView>(R.id.recycler_text)
+
+        init {
+            itemView.setOnClickListener(View.OnClickListener {
+                val intent = Intent(itemView.context, ProvinceDetailActivity()::class.java)
+                intent.putExtra(PROVINCE_NAME , mProvinceName.text)
+                itemView.context.startActivity(intent)
+
+            })
+        }
     }
 
 }
