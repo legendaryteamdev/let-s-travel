@@ -17,7 +17,8 @@ class HomeFragment : Fragment() {
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager
 
-    var myDataset = arrayOf("BATTAMBANG", "PHNOM PENH")
+    var myDataset =
+        arrayOf("BATTAMBANG", "PHNOM PENH", "SIEM REAP", "KOMPONG THOM", "KOMPONG SPEU", "KONDAL", "PREY VENG")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,11 +29,9 @@ class HomeFragment : Fragment() {
         viewManager = LinearLayoutManager(context)
         viewAdapter = HomeAdapter(myDataset)
         recyclerView = view.findViewById<RecyclerView>(R.id.my_recycler_view).apply {
-
             setHasFixedSize(true)
             layoutManager = viewManager
             adapter = viewAdapter
-
         }
 
         return view
