@@ -17,7 +17,7 @@ class HomeAdapter(private val myDataset: Array<String>) :
 
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): HomeAdapter.ViewHolder {
-        val v = LayoutInflater.from(p0?.context).inflate(R.layout.home_recycler_list, p0, false)
+        val v = LayoutInflater.from(p0.context).inflate(R.layout.home_recycler_list, p0, false)
         return ViewHolder(v)
     }
 
@@ -26,7 +26,7 @@ class HomeAdapter(private val myDataset: Array<String>) :
     }
 
     override fun onBindViewHolder(holder: HomeAdapter.ViewHolder, position: Int) {
-        holder?.mProvinceName?.text = myDataset[position]
+        holder.mProvinceName?.text = myDataset[position]
 
 
     }
