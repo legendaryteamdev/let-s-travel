@@ -3,11 +3,9 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".SettingFragment">
+             tools:context=".SettingFragment"
+             android:background="@drawable/splash_screen"
+             android:padding="32dp">
 
-    <View android:layout_width="match_parent"
-          android:layout_height="match_parent">
-
-    </View>
 
 </FrameLayout>

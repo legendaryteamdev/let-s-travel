@@ -12,7 +12,7 @@
     <string name="title_activity_near_by">Map</string>
     <string name="title_activity_detail_province">detail_province</string>
     <string name="detail_tab">Detail</string>
-    <string name="activity_tab">Activity</string>
+    <string name="activity_tab">Preparation</string>
     <string name="location_tab">Location</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>

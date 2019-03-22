@@ -23,7 +23,6 @@ class ProvinceDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_province_detail)
 
         province_name_txt.text = intent.getStringExtra(PROVINCE_NAME)
-
         getRecyclerView()
     }
 
