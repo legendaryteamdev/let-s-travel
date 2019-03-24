@@ -1,10 +1,11 @@
-package com.example.lets_travel
+package com.example.lets_travel.ui.province_detail_activity
 
 import adapter.ProvinceDetailAdapter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import com.example.lets_travel.R
 import kotlinx.android.synthetic.main.activity_province_detail.*
 
 const val PROVINCE_NAME = "province_name"

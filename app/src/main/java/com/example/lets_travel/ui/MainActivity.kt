@@ -1,10 +1,13 @@
-package com.example.lets_travel
+package com.example.lets_travel.ui
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import android.view.Window
+import com.example.lets_travel.R
+import com.example.lets_travel.ui.favorite_fragment.FavoriteFragment
+import com.example.lets_travel.ui.home_fragment.HomeFragment
+import com.example.lets_travel.ui.nearby_fragment.NearByFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

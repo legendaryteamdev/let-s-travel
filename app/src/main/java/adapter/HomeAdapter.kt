@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.example.lets_travel.ProvinceDetailActivity
+import com.example.lets_travel.ui.province_detail_activity.ProvinceDetailActivity
 import com.example.lets_travel.R
 
 const val PROVINCE_NAME = "province_name"

@@ -22,7 +22,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".VisitingPlaceDetail"
+                android:name=".ui.visiting_place_detail.VisitingPlaceDetail"
                 android:label="@string/title_activity_detail_province"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
@@ -38,17 +38,17 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ProvinceDetailActivity">
+        <activity android:name=".ui.province_detail_activity.ProvinceDetailActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SplastScreenActivity">
+        <activity android:name=".ui.splash_screen_activy.SplastScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
