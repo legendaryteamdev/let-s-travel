@@ -6,7 +6,7 @@
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
                                              android:fitsSystemWindows="true"
-                                             tools:context=".VisitingPlaceDetail">
+                                             tools:context=".ui.visiting_place_detail.VisitingPlaceDetail">
 
     <ImageView
             android:layout_width="0dp"
