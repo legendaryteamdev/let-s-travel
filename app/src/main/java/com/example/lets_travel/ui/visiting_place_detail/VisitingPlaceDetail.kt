@@ -1,4 +1,4 @@
-package com.example.lets_travel
+package com.example.lets_travel.ui.visiting_place_detail
 
 import android.support.design.widget.TabLayout
 import android.support.v7.app.AppCompatActivity
@@ -15,6 +15,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import android.widget.TextView
+import com.example.lets_travel.R
 
 class VisitingPlaceDetail : AppCompatActivity() {
 
@@ -80,7 +81,8 @@ class VisitingPlaceDetail : AppCompatActivity() {
 
 
             fun newInstance(sectionNumber: Int): PlaceholderFragment {
-                val fragment = PlaceholderFragment()
+                val fragment =
+                    PlaceholderFragment()
                 val args = Bundle()
                 args.putInt(ARG_SECTION_NUMBER, sectionNumber)
                 fragment.arguments = args
@@ -95,7 +97,9 @@ class VisitingPlaceDetail : AppCompatActivity() {
         override fun getItem(position: Int): Fragment {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1)
+            return PlaceholderFragment.newInstance(
+                position + 1
+            )
         }
 
         override fun getCount(): Int {

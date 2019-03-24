@@ -1,21 +1,23 @@
-package com.example.lets_travel
+package com.example.lets_travel.ui.favorite_fragment
+
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.lets_travel.R
 
 
-class SettingFragment : Fragment() {
-
+class FavoriteFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setting, container, false)
+        return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
+
 
 }
