@@ -1,9 +1,11 @@
-package com.example.lets_travel
+package com.example.lets_travel.ui.splash_screen_activy
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
+import com.example.lets_travel.R
+import com.example.lets_travel.ui.MainActivity
 
 class SplastScreenActivity : AppCompatActivity() {
 
@@ -14,7 +16,7 @@ class SplastScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         },SPLASH_TIME_OUT)
     }
