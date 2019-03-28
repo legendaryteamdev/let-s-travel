@@ -5,7 +5,6 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
-import android.widget.Toolbar
 import com.example.lets_travel.R
 import com.example.lets_travel.ui.favorite_fragment.FavoriteFragment
 import com.example.lets_travel.ui.home_fragment.HomeFragment

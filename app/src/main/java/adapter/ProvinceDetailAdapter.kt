@@ -1,12 +1,11 @@
 package adapter
 
-import android.content.Intent
+
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.lets_travel.R
-import com.example.lets_travel.ui.visiting_place_detail.VisitingPlaceDetail
 
 class ProvinceDetailAdapter(private val mDataset: Array<String>) :
     RecyclerView.Adapter<ProvinceDetailAdapter.ViewHolder>() {
