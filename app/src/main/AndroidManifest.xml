@@ -38,11 +38,7 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
 
-        <activity android:name=".ui.MainActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.MainActivity"></activity>
         <activity android:name=".ui.province_detail_activity.ProvinceDetailActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
