@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.setting_fragment.SettingFragment"
-             android:background="@drawable/splash_screen"
-             android:padding="32dp">
+             android:layout_width="match_parent" android:layout_height="match_parent"
+             tools:context=".ui.setting_fragment.SettingFragment">
 
-
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <include layout="@layout/app_bar"
+                 android:id="@+id/setting_toolbar"/>
+    </LinearLayout>
 </FrameLayout>

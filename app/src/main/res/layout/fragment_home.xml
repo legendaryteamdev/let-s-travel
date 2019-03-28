@@ -3,21 +3,16 @@
              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".ui.home_fragment.HomeFragment">
+             tools:context=".ui.home_fragment.HomeFragment"
+              android:theme="@style/ActionBarTheme">
+
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:orientation="vertical">
-        <ImageView
-                android:src="@drawable/sunset"
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/my_recycler_view"/>
+
+        <include layout="@layout/app_bar"
+                 android:id="@+id/home_toolbar"/>
 
         <android.support.v7.widget.RecyclerView
                 android:layout_gravity="center"
@@ -26,7 +21,6 @@
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_height="match_parent"/>
-
     </LinearLayout>
 
 
