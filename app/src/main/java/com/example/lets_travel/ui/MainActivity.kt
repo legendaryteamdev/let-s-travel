@@ -8,6 +8,7 @@ import com.example.lets_travel.R
 import com.example.lets_travel.ui.favorite_fragment.FavoriteFragment
 import com.example.lets_travel.ui.home_fragment.HomeFragment
 import com.example.lets_travel.ui.nearby_fragment.NearByFragment
+import com.example.lets_travel.ui.setting_fragment.SettingFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.action_language -> {
-
+                replaceFragment(SettingFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.action_location -> {

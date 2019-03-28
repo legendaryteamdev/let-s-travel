@@ -27,6 +27,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
+
         viewManager = LinearLayoutManager(context)
         viewAdapter = HomeAdapter(myDataset)
         recyclerView = view.findViewById<RecyclerView>(R.id.my_recycler_view).apply {
