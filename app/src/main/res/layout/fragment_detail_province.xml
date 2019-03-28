@@ -18,5 +18,4 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout"
             android:layout_marginLeft="16dp"/>
-
 </android.support.constraint.ConstraintLayout>
