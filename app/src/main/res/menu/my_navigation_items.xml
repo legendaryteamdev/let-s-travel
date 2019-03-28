@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/action_home"
           android:title="@string/home"
-          android:icon="@drawable/home" />
+          android:icon="@drawable/ic_home"
+          android:enabled="true"
+          app:showAsAction="ifRoom"/>
     <item android:id="@+id/action_favorite"
           android:title="@string/favorite"
-          android:icon="@drawable/favorite" />
+          android:icon="@drawable/ic_favorite"
+          android:enabled="true"
+          app:showAsAction="ifRoom"/>
     <item android:id="@+id/action_language"
-          android:title="@string/language"
-          android:icon="@drawable/language" />
+          android:title="@string/setting"
+          android:icon="@drawable/ic_setting"
+          android:enabled="true"
+          app:showAsAction="ifRoom"/>
     <item android:id="@+id/action_location"
           android:title="@string/location"
-          android:icon="@drawable/location" />
+          android:icon="@drawable/ic_location"
+          android:enabled="true"
+          app:showAsAction="ifRoom"/>
 </menu>

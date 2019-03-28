@@ -4,11 +4,16 @@ package com.example.lets_travel.ui.home_fragment
 import adapter.HomeAdapter
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+
+import android.view.*
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import com.example.lets_travel.R
 
 
@@ -36,7 +41,17 @@ class HomeFragment : Fragment() {
             adapter = viewAdapter
         }
 
+        //Set AppBar
+        (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.home_toolbar))
+        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.home)
+
+
         return view
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.app_bar_menu, menu)
     }
 
 

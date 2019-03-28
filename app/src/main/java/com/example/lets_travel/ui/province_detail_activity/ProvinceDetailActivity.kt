@@ -1,6 +1,7 @@
 package com.example.lets_travel.ui.province_detail_activity
 
 import adapter.ProvinceDetailAdapter
+import adapter.VisitingPlacesAdapter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -24,14 +25,25 @@ class ProvinceDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_province_detail)
 
         province_name_txt.text = intent.getStringExtra(PROVINCE_NAME)
-        getRecyclerView()
+        getFoodRecyclerView()
+        getVisitingPlacesRecyclerView()
     }
 
 
-    private fun getRecyclerView() {
+    private fun getFoodRecyclerView() {
         viewManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         viewAdapter = ProvinceDetailAdapter(mDataset)
-        recyclerView = findViewById<RecyclerView>(R.id.province_list).apply {
+        recyclerView = findViewById<RecyclerView>(R.id.food_list).apply {
+            setHasFixedSize(true)
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
+    }
+
+    private fun getVisitingPlacesRecyclerView() {
+        viewManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        viewAdapter = VisitingPlacesAdapter(mDataset)
+        recyclerView = findViewById<RecyclerView>(R.id.visiting_place_recycler).apply {
             setHasFixedSize(true)
             layoutManager = viewManager
             adapter = viewAdapter

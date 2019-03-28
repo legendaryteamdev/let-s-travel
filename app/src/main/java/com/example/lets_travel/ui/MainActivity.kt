@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
 import com.example.lets_travel.R
 import com.example.lets_travel.ui.favorite_fragment.FavoriteFragment
 import com.example.lets_travel.ui.home_fragment.HomeFragment
@@ -48,7 +49,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         replaceFragment(HomeFragment())
+
+        bottomNavigation
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.app_bar_menu , menu)
+        return true
+    }
+
+
+
 }
