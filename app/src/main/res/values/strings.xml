@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Lets-Travel</string>
-    <string name="home">Home</string>
     <string name="favorite">Favorite</string>
     <string name="language">Language</string>
     <string name="location">Location</string>
     <string name="popular_places">Popular Places</string>
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_nearby_map">Map</string>
     <string name="title_activity_near_by">Map</string>
     <string name="title_activity_detail_province">detail_province</string>

@@ -5,19 +5,27 @@
              android:layout_height="match_parent"
              tools:context=".ui.home_fragment.HomeFragment">
 
+
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:orientation="vertical">
-        <ImageView
-                android:src="@drawable/sunset"
-                android:id="@+id/imageView"
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:scaleType="centerCrop"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                app:title="@string/home"
+                app:titleTextColor="@color/white"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/my_recycler_view"/>
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"/>
 
         <android.support.v7.widget.RecyclerView
                 android:layout_gravity="center"
@@ -26,7 +34,6 @@
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_height="match_parent"/>
-
     </LinearLayout>
 
 
