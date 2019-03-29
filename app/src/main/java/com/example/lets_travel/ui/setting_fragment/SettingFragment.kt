@@ -17,7 +17,7 @@ class SettingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View = inflater.inflate(R.layout.fragment_setting, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_setting, container, false)
 
         //Set AppBar
         (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.setting_toolbar))
