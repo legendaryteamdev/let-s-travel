@@ -5,10 +5,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="@color/white"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp">
+        android:background="@color/colorWhite"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="8dp">
 
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,7 +30,7 @@
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:text="No data"
-                android:textColor="@color/black"
+                android:textColor="@color/colorBlack"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintVertical_bias="0.0"
@@ -45,8 +46,8 @@
                    android:layout_height="20dp"
                    style="@android:style/Widget.Material.RatingBar.Small"
                    android:numStars="5"
-                   android:progressTint="@color/golden_yellow"
-                   android:progressBackgroundTint="@color/grey"
+                   android:progressTint="@color/colorOrange"
+                   android:progressBackgroundTint="@color/colorDarkGray"
                    android:isIndicator="true"
                    android:rating="3.5"
                    app:layout_constraintStart_toStartOf="parent"

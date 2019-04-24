@@ -25,12 +25,12 @@
             app:menu="@menu/my_navigation_items"
             android:id="@+id/bottomNavigation"
             android:layout_gravity="bottom"
-            app:labelVisibilityMode="labeled"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintBottom_toBottomOf="parent">
     </android.support.design.widget.BottomNavigationView>
+
 
 </android.support.constraint.ConstraintLayout>
 
