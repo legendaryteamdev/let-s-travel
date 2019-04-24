@@ -35,6 +35,7 @@
                android:numStars="5"
                android:progressTint="@color/colorOrange"
                android:progressBackgroundTint="@color/colorDarkGray"
+
                android:isIndicator="true"
                android:rating="3.5" app:layout_constraintTop_toBottomOf="@+id/province_name_txt"
                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
