@@ -6,6 +6,15 @@
     <string name="popular_places">Popular Places</string>
     <string name="home">Home</string>
     <string name="setting">Setting</string>
+    <string name="English">English</string>
+    <string name="Khmer">ភាសាខ្មែរ</string>
+    <string name="ratingUs">Rating Us</string>
+    <string name="comment_optional">Comment (Optional)</string>
+    <string name="Submit">Submit</string>
+    <string name="PlaceName">Place name</string>
+    <string name="PlaceLocation">Place Location</string>
+    <string name="AddDocument">Add Document (Optional)</string>
+    <string name="PlaceSuggestion">Help us to fine a good place to visit in Cambodia</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_nearby_map">Map</string>
