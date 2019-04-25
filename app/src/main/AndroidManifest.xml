@@ -44,6 +44,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".ui.splash_screen_activy.SplastScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
