@@ -8,7 +8,7 @@
                                              android:fitsSystemWindows="true"
                                              tools:context=".ui.visiting_place_detail.VisitingPlaceDetail">
     <ImageView android:layout_width="match_parent"
-               android:layout_height="250dp"
+               android:layout_height="200dp"
                android:layout_marginBottom="8dp"
                android:src="@drawable/kdat"
                android:scaleType="centerCrop"
@@ -30,7 +30,9 @@
               app:layout_constraintEnd_toEndOf="parent"
               android:layout_marginEnd="276dp"
               app:layout_constraintStart_toStartOf="parent"
-              android:layout_marginStart="16dp" app:layout_constraintHorizontal_bias="0.0" android:id="@+id/textView"/>
+              android:layout_marginStart="16dp"
+              app:layout_constraintHorizontal_bias="0.0"
+              android:id="@+id/textView"/>
 
     <RatingBar android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -74,12 +76,6 @@
                     android:background="@color/colorBlack"
                     android:icon="@drawable/ic_detail"/>
             <android.support.design.widget.TabItem
-                    android:id="@+id/tabItem2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Season"
-                    android:icon="@drawable/ic_season"/>
-            <android.support.design.widget.TabItem
                     android:id="@+id/tabItem3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -101,7 +97,8 @@
             android:layout_width="0dp"
             android:layout_height="444dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:layout_constraintTop_toBottomOf="@+id/appbar" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            app:layout_constraintStart_toStartOf="parent"
     />
 
 </android.support.constraint.ConstraintLayout>
