@@ -18,6 +18,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".favorite_list"
+                android:label="@string/title_activity_favorite_list"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
                 android:name=".ui.visiting_place_detail.VisitingPlaceDetail"
                 android:label="@string/title_activity_detail_province"
                 android:theme="@style/AppTheme">
@@ -27,16 +32,16 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
 
-        <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.MainActivity"/>
         <activity android:name=".ui.province_detail_activity.ProvinceDetailActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".ui.splash_screen_activy.SplastScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
