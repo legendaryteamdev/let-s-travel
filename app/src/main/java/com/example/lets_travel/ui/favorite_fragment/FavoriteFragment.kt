@@ -21,7 +21,7 @@ class FavoriteFragment : Fragment() {
 
 
         //Set AppBar
-        (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.favorite_toolbar))
+       // (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.favorite_toolbar))
         (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.favorite)
 
         return view
