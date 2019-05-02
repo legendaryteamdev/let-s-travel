@@ -36,9 +36,9 @@ class HomeFragment : Fragment() {
             adapter = viewAdapter
         }
 
-        //Set AppBar
-        (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.home_toolbar))
-        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.home)
+//        //Set AppBar
+//        (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.home_toolbar))
+//        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.home)
 
 
         return view
