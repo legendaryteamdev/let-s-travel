@@ -18,6 +18,7 @@ class HomeAdapter(private val myDataset: Array<String>) :
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): HomeAdapter.ViewHolder {
         val v = LayoutInflater.from(p0.context).inflate(R.layout.home_recycler_list, p0, false)
+        
         return ViewHolder(v)
     }
 
