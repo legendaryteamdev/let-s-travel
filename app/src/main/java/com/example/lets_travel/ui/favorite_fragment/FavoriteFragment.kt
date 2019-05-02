@@ -19,11 +19,6 @@ class FavoriteFragment : Fragment() {
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_favorite, container, false)
 
-
-        //Set AppBar
-        (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.favorite_toolbar))
-        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.favorite)
-
         return view
     }
 

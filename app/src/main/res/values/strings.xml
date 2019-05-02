@@ -5,6 +5,8 @@
     <string name="location">Location</string>
     <string name="popular_places">Popular Places</string>
     <string name="home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="setting">Setting</string>
     <string name="English">English</string>
     <string name="Khmer">ភាសាខ្មែរ</string>
@@ -17,6 +19,7 @@
     <string name="PlaceSuggestion">Help us to fine a good place to visit in Cambodia</string>
     <string name="WriteReview">Write a review</string>
     <string name="activities">Activities</string>
+    <string name="about_app">About app</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_nearby_map">Map</string>
