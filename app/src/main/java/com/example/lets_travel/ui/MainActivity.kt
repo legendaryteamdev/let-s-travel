@@ -1,5 +1,7 @@
 package com.example.lets_travel.ui
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
@@ -7,15 +9,16 @@ import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBar
 import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import com.example.lets_travel.R
 import com.example.lets_travel.ui.favorite_fragment.FavoriteFragment
 import com.example.lets_travel.ui.home_fragment.HomeFragment
 import com.example.lets_travel.ui.nearby_fragment.NearByFragment
-import com.example.lets_travel.ui.setting_fragment.SettingFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -30,7 +33,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 replaceFragment(FavoriteFragment())
             }
             R.id.nav_language -> {
-                replaceFragment(SettingFragment())
+                showDialog()
             }
             R.id.nav_rating -> {
 
@@ -51,6 +54,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.commit()
     }
 
+
+
+    private fun showDialog() {
+        val mDialogView = LayoutInflater.from(this).inflate(R.layout.language_dialog, null)
+        val builder = AlertDialog.Builder(this@MainActivity)
+        builder.setView(mDialogView)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+        dialog.window.setLayout(400 , 350)
+        dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -60,11 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         toolbar.setTitle(R.string.home)
-        val actionbar: ActionBar? = supportActionBar
-        actionbar?.apply {
-            setDisplayHomeAsUpEnabled(true)
-            setHomeAsUpIndicator(R.drawable.ic_menu)
-        }
+
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
