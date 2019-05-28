@@ -17,62 +17,12 @@ import com.example.lets_travel.ui.visiting_place_rating_fragment.VisintingPlaceR
 
 class VisitingPlaceDetail : AppCompatActivity() {
 
-
-    private var mSectionsPagerAdapter: SectionsPagerAdapter? = null
-
-    private var mViewPager: ViewPager? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visiting_place_detail)
 
-        mSectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
-
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = findViewById<View>(R.id.container) as ViewPager
-        mViewPager!!.adapter = mSectionsPagerAdapter
-
-        val tabLayout = findViewById<View>(R.id.tabs) as TabLayout
-
-        mViewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-        tabLayout.addOnTabSelectedListener(TabLayout.ViewPagerOnTabSelectedListener(mViewPager))
 
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_detail_province, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-
-
-        return if (id == R.id.action_settings) {
-            true
-        } else super.onOptionsItemSelected(item)
-
-    }
-
-
-    inner class SectionsPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
-
-        override fun getItem(position: Int): Fragment? {
-
-            var fragment: Fragment? = null
-            when (position) {
-                0 -> fragment = VisitingPlaceDetailFragment()
-                1 -> fragment = VisintingPlaceRatingFragment()
-                2 -> fragment = VisitingPlaceLocationFragment()
-            }
-
-            return fragment
-        }
-
-        override fun getCount(): Int {
-            // Show 3 total pages.
-            return 3
-        }
-    }
 }
