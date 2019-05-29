@@ -3,20 +3,26 @@ package com.example.lets_travel.ui.home_fragment
 
 import adapter.HomeAdapter
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.*
+import android.widget.Toast
 
 import com.example.lets_travel.R
+import com.example.lets_travel.ultils.Tools
+import com.example.lets_travel.widget.SpacingGridView
 
 
 class HomeFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-    private lateinit var viewManager: RecyclerView.LayoutManager
+    private var parent_view: View? = null
+    private var recyclerView: RecyclerView? = null
+    private var mAdapter: HomeAdapter? = null
+
 
     var myDataset =
         arrayOf("BATTAMBANG", "PHNOM PENH", "SIEM REAP", "KOMPONG THOM", "KOMPONG SPEU", "KONDAL", "PREY VENG")
@@ -27,21 +33,27 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
-
-        viewManager = LinearLayoutManager(context)
-        viewAdapter = HomeAdapter(myDataset)
-        recyclerView = view.findViewById<RecyclerView>(R.id.my_recycler_view).apply {
-            setHasFixedSize(true)
-            layoutManager = viewManager
-            adapter = viewAdapter
-        }
-
-//        //Set AppBar
-//        (activity as AppCompatActivity).setSupportActionBar(view.findViewById(R.id.home_toolbar))
-//        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.home)
-
-
+        parent_view = view.findViewById(android.R.id.content)
+        initComponent(view)
         return view
+    }
+
+    private fun initComponent(view:View) {
+        recyclerView = view!!.findViewById<View>(R.id.recyclerView) as RecyclerView
+        recyclerView!!.layoutManager = GridLayoutManager(context, 2)
+        recyclerView!!.addItemDecoration(SpacingGridView(2, Tools.dpToPx(context, 3), true))
+        recyclerView!!.setHasFixedSize(true)
+
+
+
+        //set data and list adapter
+        mAdapter = HomeAdapter(myDataset)
+        recyclerView!!.adapter = mAdapter
+
+        // on item list clicked
+
+//        mAdapter!!.setOnItemClickListener { view,  position -> Snackbar.make(parent_view!!,Snackbar.LENGTH_SHORT).show() }
+//                mAdapter!!.setOnItemClickListener()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
