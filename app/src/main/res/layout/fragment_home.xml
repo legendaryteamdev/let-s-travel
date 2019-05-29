@@ -3,6 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+
              tools:context=".ui.home_fragment.HomeFragment"
              android:theme="@style/AppTheme">
 
@@ -10,14 +11,26 @@
                   android:layout_height="match_parent"
                   android:orientation="vertical">
 
-        <android.support.v7.widget.RecyclerView
-                android:layout_gravity="center"
-                android:id="@+id/my_recycler_view"
-                android:scrollbars="vertical"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="match_parent"/>
-    </LinearLayout>
+        <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:layout_gravity="center"-->
+                <!--android:id="@+id/my_recycler_view"-->
+                <!--android:scrollbars="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_height="match_parent"/>-->
+
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:paddingHorizontal="5dp"
+                    android:scrollingCache="true" />
+
+        </LinearLayout>
+
+
 
 
 </FrameLayout>
