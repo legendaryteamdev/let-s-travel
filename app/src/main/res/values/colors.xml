@@ -10,6 +10,7 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorTransparent">#0000ffff</color>
     <color name="gray_background">#424e59</color>
+    <color name="grey_5">#f2f2f2</color>
     <color name="grey_10">#e6e6e6</color>
     <color name="grey_20">#cccccc</color>
     <color name="grey_40">#999999</color>
@@ -18,8 +19,10 @@
     <color name="grey_90">#263238</color>
     <color name="grey_900">#212121</color>
     <color name="grey_1000">#1a1a1a</color>
+    <color name="overlay_dark_10">#1A000000</color>
     <color name="overlay_dark_40">#66000000</color>
     <color name="overlay_dark_50">#80000000</color>
+    <color name="overlay_dark_30">#4D000000</color>
     <color name="blue_grey_800">#37474F</color>
     <color name="overlay_light_10">#1AFFFFFF</color>
 </resources>
