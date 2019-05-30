@@ -28,8 +28,8 @@
                 android:icon="@drawable/ic_add_place"
                 android:title="Add new place" />
         <item
-                android:id="@+id/nav_aboutapp"
+                android:id="@+id/nav_aboutus"
                 android:icon="@drawable/ic_about"
-                android:title="@string/about_app" />
+                android:title="@string/about_us" />
     </group>
 </menu>

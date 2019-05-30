@@ -1,5 +1,6 @@
 package com.example.lets_travel.ui
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -15,9 +16,11 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import com.example.lets_travel.R
+import com.example.lets_travel.ui.about_us.AboutUs
 import com.example.lets_travel.ui.favorite_fragment.FavoriteFragment
 import com.example.lets_travel.ui.home_fragment.HomeFragment
 import com.example.lets_travel.ui.nearby_fragment.NearByFragment
+import com.example.lets_travel.ui.search_bar.SearchBar
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -40,6 +43,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_nearby -> {
                 replaceFragment(NearByFragment())
             }
+            R.id.nav_aboutus -> {
+               var intent = Intent(applicationContext , AboutUs::class.java)
+                startActivity(intent)
+            }
+
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
@@ -54,16 +62,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-
     private fun showDialog() {
         val mDialogView = LayoutInflater.from(this).inflate(R.layout.language_dialog, null)
         val builder = AlertDialog.Builder(this@MainActivity)
         builder.setView(mDialogView)
         val dialog: AlertDialog = builder.create()
         dialog.show()
-        dialog.window.setLayout(400 , 350)
+        dialog.window.setLayout(800, 450)
         dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,8 +103,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.app_bar_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item!!.itemId){
+            R.id.search_menu_icon -> {
+                var intent = Intent(applicationContext , SearchBar::class.java)
+                startActivity(intent)
+                return true
+            }
+            else ->{
+                super.onOptionsItemSelected(item)
+            }
+        }
         return true
     }
 

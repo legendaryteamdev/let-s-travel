@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorOrange</item>
-        <item name="colorPrimaryDark">@color/colorOrange</item>
-        <item name="colorAccent">@color/colorOrange</item>
+        <item name="colorPrimary">@color/gray_background</item>
+        <item name="colorPrimaryDark">@color/gray_background</item>
+        <item name="colorAccent">@color/gray_background</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="actionOverflowButtonStyle">@style/DrawerArrowStyle</item>
 
@@ -22,6 +22,7 @@
         <item name="colorAccent">@color/colorOrange</item>
     </style>
 
+    <!--style for ripple library-->
     <style name="RippleStyleWhite">
         <item name="mrl_rippleOverlay">true</item>
         <item name="mrl_rippleColor">#80FFFFFF</item>
@@ -36,6 +37,7 @@
     <style name="RippleStyleDark" parent="RippleStyleWhite">
         <item name="mrl_rippleColor">#80000000</item>
     </style>
+
 
 
 
