@@ -2,80 +2,87 @@
 <com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
                                                 android:id="@+id/lyt_parent"
-                                                style="@style/RippleStyleBlack"
+                                                style="@style/RippleStyleWhite"
                                                 android:layout_width="match_parent"
-                                                android:layout_height="240dp">
+                                                android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="230dp">
 
-        <RelativeLayout
+        <ImageView
+                android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kdat" />
 
-            <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/kdat"/>
-
-        </RelativeLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/overlay_dark_50" />
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/blue_grey_800"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
                 android:padding="@dimen/spacing_large">
 
             <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
+                    android:orientation="horizontal">
                 <TextView
-                        android:id="@+id/name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:singleLine="true"
-                        android:text="Two Line"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"/>
-
-                <TextView
-                        android:id="@+id/brief"
-                        android:layout_width="match_parent"
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_small"
-                        android:maxLines="1"
-                        android:singleLine="true"
-                        android:text="Support Text"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                        android:textColor="@android:color/white"/>
+                        android:text="short_lorem_ipsum"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        app:fontFamily="sans-serif-medium" />
+
+
+            <!--<TextView-->
+                        <!--android:id="@+id/date"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Wed, 20 Jan 19, 05:08 PM"-->
+                        <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+                        <!--android:textColor="@color/grey_10" />-->
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                <TextView
+                        android:id="@+id/subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_round_grey"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingRight="@dimen/spacing_medium"
+                        android:text="Politics"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_10" />
 
             </LinearLayout>
 
-            <View
-                    android:layout_width="@dimen/spacing_large"
-                    android:layout_height="0dp"/>
-
-            <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:tint="@color/grey_5"
-                    app:srcCompat="@drawable/ic_favorite"/>
+            <!--<TextView-->
+                    <!--android:id="@+id/title"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/spacing_small"-->
+                    <!--android:maxLines="2"-->
+                    <!--android:text="short_lorem_ipsum"-->
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--app:fontFamily="sans-serif-medium" />-->
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </com.balysv.materialripple.MaterialRippleLayout>
