@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 replaceFragment(NearByFragment())
             }
             R.id.nav_aboutus -> {
-               var intent = Intent(applicationContext , AboutUs::class.java)
+                var intent = Intent(applicationContext, AboutUs::class.java)
                 startActivity(intent)
             }
 
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         builder.setView(mDialogView)
         val dialog: AlertDialog = builder.create()
         dialog.show()
-        dialog.window.setLayout(800, 450)
+        dialog.window.setLayout(600, 450)
         dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 
@@ -110,13 +110,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item!!.itemId){
+        when (item!!.itemId) {
             R.id.search_menu_icon -> {
-                var intent = Intent(applicationContext , SearchBar::class.java)
+                var intent = Intent(applicationContext, SearchBar::class.java)
                 startActivity(intent)
                 return true
             }
-            else ->{
+            else -> {
                 super.onOptionsItemSelected(item)
             }
         }

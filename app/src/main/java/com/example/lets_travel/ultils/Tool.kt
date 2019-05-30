@@ -5,23 +5,16 @@ import android.content.Context
 import android.content.res.Resources
 import android.os.Build
 import android.support.annotation.ColorRes
+import android.support.annotation.DrawableRes
 import android.util.TypedValue
 import android.view.WindowManager
+import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 
 object Tools {
 
-    val screenWidth: Int
-        get() = Resources.getSystem().displayMetrics.widthPixels
-
-    val screenHeight: Int
-        get() = Resources.getSystem().displayMetrics.heightPixels
-
-
-    fun dpToPx(c: Context?, dp: Int): Int {
-        val r = c!!.resources
-        return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), r.displayMetrics))
-    }
 
     fun setSystemBarColor(act: Activity, @ColorRes color: Int) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -30,6 +23,17 @@ object Tools {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             window.statusBarColor = act.resources.getColor(color)
         }
+    }
+
+    fun displayImageOriginal(ctx: Context, img: ImageView, @DrawableRes drawable: Int) {
+        try {
+            Glide.with(ctx).load(drawable)
+                .crossFade()
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .into(img)
+        } catch (e: Exception) {
+        }
+
     }
 
 
