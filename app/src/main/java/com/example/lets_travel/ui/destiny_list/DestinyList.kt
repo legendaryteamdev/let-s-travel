@@ -15,7 +15,7 @@ class DestinyList : AppCompatActivity() {
     private var recyclerView: RecyclerView? = null
     private var mAdapter: DestinyAdapter? = null
 
-    var mData = arrayOf("BattamBang","Phnom Penh","Siem Reap","Koh Kong" , "KomPot")
+    var mData = arrayListOf<String>("Kdat La Tang", "Kdat Sanaka", "Bokko Mountain", "Doung Te")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,6 @@ class DestinyList : AppCompatActivity() {
 
     private fun initToolbar() {
         val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
-        toolbar.setNavigationIcon(R.drawable.ic_menu)
         setSupportActionBar(toolbar)
     }
 
@@ -39,7 +38,7 @@ class DestinyList : AppCompatActivity() {
 
 
         //set data and list adapter
-        mAdapter = DestinyAdapter( mData, R.layout.item_news_horizontal)
+        mAdapter = DestinyAdapter(mData, R.layout.item_news_horizontal)
         recyclerView!!.adapter = mAdapter
 
 
