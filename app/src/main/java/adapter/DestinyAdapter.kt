@@ -1,5 +1,6 @@
 package adapter
 
+import android.content.Intent
 import android.support.annotation.LayoutRes
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.lets_travel.R
+import com.example.lets_travel.ui.visiting_place_detail.VisitingPlaceDetail
 
 class DestinyAdapter(private val items: ArrayList<String>, @param:LayoutRes @field:LayoutRes
 private val layout_id: Int) : RecyclerView.Adapter<DestinyAdapter.ViewHolder>() {
@@ -24,6 +26,11 @@ private val layout_id: Int) : RecyclerView.Adapter<DestinyAdapter.ViewHolder>() 
             title = v.findViewById(R.id.title)
             subtitle = v.findViewById(R.id.subtitle)
             lyt_parent = v.findViewById(R.id.lyt_parent)
+
+            v.setOnClickListener {
+                var intent = Intent(v.context ,VisitingPlaceDetail::class.java)
+                v.context.startActivity(intent)
+            }
         }
     }
 
