@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.lets_travel.R
-import com.example.lets_travel.ui.visiting_place_detail.VisitingPlaceDetail
+import com.legendaryteamdev.derleng.R
+import com.legendaryteamdev.derleng.ui.visiting_place_detail.VisitingPlaceDetail
 
 class DestinyAdapter(private val items: ArrayList<String>, @param:LayoutRes @field:LayoutRes
 private val layout_id: Int) : RecyclerView.Adapter<DestinyAdapter.ViewHolder>() {

@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.example.lets_travel.R
-import com.example.lets_travel.ui.province_detail_activity.ProvinceDetailActivity
+import com.legendaryteamdev.derleng.R
+import com.legendaryteamdev.derleng.ui.province_detail_activity.ProvinceDetailActivity
 
 class HomeAdapter(private val  mDataset: Array<String>, @param:LayoutRes @field:LayoutRes
 private val layout_id: Int) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {

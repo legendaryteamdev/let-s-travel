@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.example.lets_travel.R
-import com.example.lets_travel.ui.visiting_place_detail.VisitingPlaceDetail
+import com.legendaryteamdev.derleng.R
+import com.legendaryteamdev.derleng.ui.visiting_place_detail.VisitingPlaceDetail
 
 class VisitingPlacesAdapter(private val myDataset: Array<String>) :
     RecyclerView.Adapter<VisitingPlacesAdapter.ViewHolder>() {
