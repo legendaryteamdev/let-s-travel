@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.lets_travel">
+          package="com.legendaryteamdev.derleng">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -17,34 +17,37 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity
-                android:name=".ui.visiting_place_detail.VisitingPlaceDetail"
-                android:label="@string/title_activity_detail_province"
-                android:theme="@style/AppTheme">
-        </activity>
-        <activity
-                android:name=".ui.search_bar.SearchBar"
-                android:label="@string/title_activity_detail_province"
-                android:theme="@style/AppTheme">
-        </activity>
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
-        <activity android:name=".ui.destiny_list.DestinyList"></activity>
-        <activity android:name=".ui.MainActivity"></activity>
-        <activity android:name=".ui.about_us.AboutUs"></activity>
-        <activity android:name=".ui.province_detail_activity.ProvinceDetailActivity">
+        <activity
+                android:name="com.legendaryteamdev.derleng.ui.visiting_place_detail.VisitingPlaceDetail"
+                android:label="@string/title_activity_detail_province"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name="com.legendaryteamdev.derleng.ui.search_bar.SearchBar"
+                android:label="@string/title_activity_detail_province"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name="com.legendaryteamdev.derleng.ui.destiny_list.DestinyList"></activity>
+        <activity android:name="com.legendaryteamdev.derleng.ui.MainActivity"></activity>
+        <activity android:name="com.legendaryteamdev.derleng.ui.about_us.AboutUs"></activity>
+        <activity android:name="com.legendaryteamdev.derleng.ui.province_detail_activity.ProvinceDetailActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.splash_screen_activy.SplastScreenActivity">
+        <activity android:name="com.legendaryteamdev.derleng.ui.splash_screen_activy.SplastScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
+
+
 
 </manifest>
